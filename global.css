@@ -2,3 +2,179 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.display-120 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.display-110 {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.display-100 {
+    font-size: 5rem;
+}
+
+.display-90 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.display-80 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.display-70 {
+    font-size: 4rem;
+}
+
+.display-60 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.display-50 {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.display-40 {
+    font-size: 3.5rem;
+}
+
+.display-30 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.display-20 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.display-10 {
+    font-size: 3rem;
+}
+
+.title-100 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.title-90 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.title-80 {
+    font-size: 2.5rem;
+}
+
+.title-70 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.title-60 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.title-50 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.title-40 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.title-30 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.title-20 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.title-10 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.title-5 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.body-120 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.body-110 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.body-100 { 
+    font-size: 1rem;
+}
+
+.body-90 {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.body-80 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.body-70 {
+    font-size: 0.875rem;
+}
+
+.body-60 {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.body-50 {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.body-40 {
+    font-size: 0.75rem;
+}
+
+.body-30 {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.body-20 {
+    font-size: 0.625rem;
+    font-weight: 500;
+}
+
+.body-10 {
+    font-size: 0.625rem;
+}
+
+.caption-20 {
+    font-size: 0.688rem;
+    font-style: italic;
+}
+
+.caption-10 {
+    font-size: 0.875rem;
+    font-style: italic;
+}
