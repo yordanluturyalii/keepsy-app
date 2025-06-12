@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import { hideAsync, preventAutoHideAsync } from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+import "react-native-reanimated";
 import "../global.css";
 
 preventAutoHideAsync();
@@ -25,7 +26,7 @@ export default function RootLayout() {
     return (
         <>
             <Stack screenOptions={{ headerShown: false }} />
-            <StatusBar style="auto" />
+            <StatusBar style="dark" />
         </>
     );
 }

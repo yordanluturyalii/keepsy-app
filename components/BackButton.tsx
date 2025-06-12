@@ -9,9 +9,9 @@ type BackButtonProps = {
 const BackButton = ({className, handleNavigation}: BackButtonProps) => {
     return (
         <>
-            <TouchableOpacity className={`flex flex-row gap-3 ${className}`}>
-                <ArrowLeft width={20} height={20} className="w-80"/>
-                <Text className="text-body-50 text-primary-600">Back</Text>
+            <TouchableOpacity className={`flex flex-row gap-2 ${className} text-primary-600`} onPress={handleNavigation}>
+                <ArrowLeft width={20} height={20}/>
+                <Text className="text-body-90 text-primary-600 font-semibold">Back</Text>
             </TouchableOpacity>
         </>
     )
