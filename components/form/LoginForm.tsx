@@ -8,19 +8,30 @@ import {
     Dimensions,
     KeyboardAvoidingView,
     Platform,
-    Keyboard,
 } from "react-native";
 import Input from "../Input";
 import PasswordInput from "../PasswordInput";
 import Button from "../Button";
-import { useState } from "react";
 
-const LoginForm = () => {
-    const { control, handleSubmit, formState: { errors, isValid } } = useForm<RegisterRequest>({
+type LoginFormProps = {
+    onError: (error: string | undefined) => void
+}
+
+const LoginForm = ({ onError }: LoginFormProps) => {
+    const { control, handleSubmit, formState: { errors, isValid, isSubmitting } } = useForm<RegisterRequest>({
         resolver: zodResolver(registerValidation),
     });
 
     const screenHeight = Dimensions.get('window').height;
+
+    const onSubmit = (data: RegisterRequest) => {
+        const firstError = errors.email?.message || errors.password?.message;
+        onError(firstError);
+        console.log(data);
+        if (data.email !== "admin@gmail.com") {
+            onError("Email already register");
+        } else if (data.password !== "Admin@1234") onError("Password doesn't match");
+    };
 
     return (
         <KeyboardAvoidingView
@@ -31,7 +42,7 @@ const LoginForm = () => {
                 scrollEnabled={false}
                 contentContainerStyle={{
                     flexGrow: 1,
-                    paddingTop: 40,
+                    paddingTop: 20,
                     minHeight: screenHeight - 150
                 }}
                 showsVerticalScrollIndicator={false}
@@ -73,16 +84,13 @@ const LoginForm = () => {
 
             <View style={{
                 paddingTop: Platform.OS === "ios" ? 34 : 20,
-                paddingBottom: 34,
-                backgroundColor: 'white',
-                borderTopColor: '#f0f0f0',
             }}>
                 <Button
                     isIcon={false}
                     text="Create an account"
-                    disabled={!isValid}
+                    disabled={isSubmitting || !isValid}
                     className="w-full"
-                    onPress={handleSubmit((data) => console.log(data))}
+                    onPress={handleSubmit(onSubmit)}
                 />
             </View>
         </KeyboardAvoidingView>

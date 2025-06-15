@@ -6,7 +6,6 @@ const HomeScreen = () => {
 	const route = useRouter();
 	return (
 		<SafeAreaView className="gap-y-3">
-			<Link href={"/register"}>Register Screen</Link>
 			<LoginBottomSheet />
 		</SafeAreaView>
 	);
